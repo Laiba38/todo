@@ -2,7 +2,6 @@ package com.example.todo.components.topbar
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -15,27 +14,23 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.outlined.Notifications
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarColors
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.res.painterResource
-import com.example.todo.R
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.todo.R
 
 class TopBar {
+    @Preview(showBackground = true, showSystemUi = true)
     @SuppressLint("NotConstructor")
     @Composable
     fun TopBar() {
@@ -51,7 +46,7 @@ class TopBar {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_background),
+                    painter = painterResource(id = R.drawable.user),
                     contentDescription = "User Avatar",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
@@ -94,4 +89,5 @@ class TopBar {
         }
 
     }
+
 }
