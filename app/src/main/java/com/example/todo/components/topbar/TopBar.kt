@@ -54,9 +54,7 @@ class TopBar {
                         .size(76.dp)
                 )
 
-                Row(
-
-                ) {
+                Row {
                     IconButton(
                         modifier = Modifier.size(59.dp),
                         onClick = {},
